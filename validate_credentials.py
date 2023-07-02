@@ -1,6 +1,6 @@
 import streamlit as st
 import snowflake.connector
-#from snowflake.snowpark import Session
+from snowflake.snowpark import Session
 
 
 

@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+#import openai
 
 ## Validate Snowflake connection ##
 

@@ -1,8 +1,9 @@
 import streamlit as st
 from snowflake.snowpark import Session
 
-#import openai
-conn = st.experimental_connection("snowpark")
+# Initialize connection.
+conn = st.experimental_connection('snowpark')
+
 df = conn.query("select current_warehouse()")
 st.write(df)
 

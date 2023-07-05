@@ -3,6 +3,7 @@ import pandas as pd
 from snowflake.connector import connect
 from snowflake.connector.connection import SnowflakeConnection
 
+
 # Share the connector across all users connected to the app
 @st.cache_resource()
 def get_connector() -> SnowflakeConnection:
@@ -12,6 +13,9 @@ def get_connector() -> SnowflakeConnection:
 
 # Time to live: the maximum number of seconds to keep an entry in the cache
 TTL = 24 * 60 * 60
+snowflake_connector = get_connector()
+
+
 
 # Using `experimental_memo()` to memoize function executions
 @st.cache_data(ttl=TTL)
